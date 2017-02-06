@@ -1,20 +1,39 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Getting started with Node.js](#getting-started-with-nodejs)
+  - [What is Node.js?](#what-is-nodejs)
+    - [Editors](#editors)
+  - [Installation](#installation)
+    - [Windows](#windows)
+    - [OSX](#osx)
+    - [Linux](#linux)
+  - [Terminal](#terminal)
+  - [Testing the Installation](#testing-the-installation)
+  - [The REPL](#the-repl)
+  - [NPM](#npm)
+  - [Hello World](#hello-world)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Getting started with Node.js
 
-## What is Node.js?
+## [What is Node.js?](what-is-node-js)
 It was 2009. Ryan Dahl, feeling the tools of the day for writing servers was terrible, set out to fix it. He took the open source JavaScript engine that Google Chrome uses, added an event loop and a low level I/O API and dubbed it Node.js.
 
 Node.js is an "asynchronous event driven JavaScript runtime". In practice, it's great for quickly spinning up all sorts of things that run on the internet. Web servers, game servers, micro services. Almost anything that works over UDP, TCP, HTTP could benefit from Node.js.
 
-### Editors
+### [Editors](editors)
 I personally use [Sublime Text](https://www.sublimetext.com/) because of how well it handles large files. There are tons of high quality free options out there that offer all sorts of fancy things. All the guides in this series will recommend (but not require) syntax highlighting.
 
 That said, here's a few more high quality free editors that I've used and like. You'll benefit from using any one of them:
 
-[Atom](https://atom.io/)
-[Visual Studio Code](https://code.visualstudio.com/)
-[Notepad++](https://notepad-plus-plus.org/) (Windows Only)
+- [Atom](https://atom.io/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Notepad++](https://notepad-plus-plus.org/) (Windows Only)
 
-## Installation
+## [Installation](installation)
 
 ### Windows
 Go to the [Node.js webpage](https://nodejs.org/en/) and download the current version installer for your system.
@@ -31,17 +50,33 @@ Alternatively if you'd like, you can [install homebrew](http://brew.sh), a packa
 ### Linux
 The process for this is going to vary wildly depending on your distribution. [Click here for an exhaustive guide on installing from a package manager](https://nodejs.org/en/download/package-manager/).
 
-## Terminal
+## [Terminal](terminal)
 
-Working with node is going to require a lot of command line usage. Windows users can access command prompt with `windows key + R`, typing `cmd` and hitting enter. OSX users can press `command + space` and type `terminal`. Linux users can perform whatever magic spell is required for their particular distribution.
+Working with node is going to require a lot of command line usage.
+
+Windows users can access command prompt with `windows key + R`, typing `cmd` and hitting enter. Alternatively, you can type `cmd` in the start menu search.
+
+![windows prompt](readme/images/windows-prompt.png)
+
+OSX users can press `command + space` and type `terminal`. Or go to `finder > applications > utilities > terminal`.
+
+![osx terminal](readme/images/osx-terminal.png)
+
+Linux users can perform whatever magic spell is required for their particular distribution.
 
 It's important you know how to navigate around your file system using the terminal. Windows/OSX/Linux users can change their current directory with the `cd` command. You can make new folders with `mkdir`. A common way to start a new project is `cd <you project directory>` `mkdir <name of your new project without spaces>` `cd <name of the folder you just made>`.
 
-## Testing the Installation
+![osx commands](readme/images/osx-terminal-commands.png)
 
-In your terminal, try the command `node -v`.  If it says v7.5.0, or similar, the installation was successful.
+![windows commands](readme/images/windows-prompt-commands.png)
 
-## The REPL
+## [Testing the Installation](testing-the-installation)
+
+In your terminal, try the command `node -v`.  If it says v7.5.0, or similar, the installation was successful. The `-v` there is called a command line argument. `-v` is an argument that tells node to return the version.
+
+![node version](readme/images/node-version.png)
+
+## [The REPL](the-repl)
 
 REPL stands for Read-Evaluate-Print Loop. It's a sandbox that lets you write and immediately execute javascript line by line.
 
@@ -52,9 +87,12 @@ Once installed, you can run the `node` command from your terminal without any ar
 ```
 
 Type `1+1` in the box and hit enter. It should say `2` on the next line. Yay we did math.
-You can get out of the REPL by pressing `control + C` twice or typing `.exit`
 
-## NPM
+You can get out of the REPL by pressing `control + C` twice. `control + C` is the hotkey to politely ask terminal processes to die. Alternatively you can exit by typing `.exit`.
+
+![node repl](readme/images/node-repl.png)
+
+## [NPM](npm)
 
 NPM is node's package manager. It's the major way that node users share their work with each other. Let's try it.
 
@@ -68,7 +106,7 @@ Now let's open up the repl and run this code
 
 I got Mimi!
 
-## Hello World
+## [Hello World](hello-world)
 
 The REPL is a great tool but most scripts live in files. Make a file named hello.js in your favorite editor. Type or copy this code:
 
@@ -78,7 +116,6 @@ Save it in a new project folder.
 var catNames = require('cat-names');
 //i is zero. While i is less than 10 do everything between the {}
 for(var i = 0; i < 10; i = i + 1){
-	//
 	console.log("Hello " + catNames.random());
 }
 //and then add 1 to i and go back to the top {
